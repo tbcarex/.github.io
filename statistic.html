@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>TB-CareX</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:wght@500;700;900&display=swap" rel="stylesheet"> 
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-light p-0 wow fadeIn" data-wow-delay="0.1s">
+        <div class="row gx-0 d-none d-lg-flex">
+            <div class="col-lg-7 px-5 text-start">
+                <div class="h-100 d-inline-flex align-items-center py-3 me-4">
+                    <small class="fa fa-map-marker-alt text-primary me-2"></small>
+                    <small>Mataram, Indonesia</small>
+                </div>
+                <div class="h-100 d-inline-flex align-items-center py-3">
+                    <small class="far fa-clock text-primary me-2"></small>
+                    <small>Mon - Fri : 09.00 AM - 09.00 PM</small>
+                </div>
+            </div>
+            <div class="col-lg-5 px-5 text-end">
+                <div class="h-100 d-inline-flex align-items-center py-3 me-4">
+                    <small class="fa fa-phone-alt text-primary me-2"></small>
+                    <small>+012 345 6789</small>
+                </div>
+                <div class="h-100 d-inline-flex align-items-center">
+                    <a class="btn btn-sm-square rounded-circle bg-white text-primary me-1" href=""><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-sm-square rounded-circle bg-white text-primary me-1" href=""><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-sm-square rounded-circle bg-white text-primary me-1" href=""><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-sm-square rounded-circle bg-white text-primary me-0" href=""><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0 wow fadeIn" data-wow-delay="0.1s">
+        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+            <h1 class="m-0 text-primary"><i class="far fa-hospital me-3"></i>TB-CareX</h1>
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+               <a href="index.html" class="nav-item nav-link">Home</a>
+                <a href="meditrack.html" class="nav-item nav-link">MediTrack</a>
+                <a href="adherence.html" class="nav-item nav-link">Adherence Reward System</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Refill MyOAT</a>
+                    <div class="dropdown-menu rounded-0 rounded-bottom m-0">
+                        <a href="schedule.html" class="dropdown-item">Early Schedule</a>
+                        <a href="notification.html" class="dropdown-item">Notification and Reminder</a>
+                        <a href="confirmation.html" class="dropdown-item">Present Confirmation</a>
+                        <a href="verification.html" class="dropdown-item">Verification</a>
+                        <a href="statistic.html" class="dropdown-item">History and Statistic</a>
+                    </div>
+                </div>
+                <a href="symptom.html" class="nav-item nav-link">Symptom Tracker</a>
+            </div>
+            <a href="" class="btn btn-primary rounded-0 py-4 px-lg-5 d-none d-lg-block">LAB RESULTS<i class="fa fa-arrow-right ms-3"></i></a>
+        </div>
+    </nav>
+    <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TB-CareX - Verifikasi Pengambilan & Riwayat</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f9fafd;
+      margin: 0;
+      padding: 20px;
+      color:#222;
+    }
+    .container {
+      max-width: 800px;
+      margin: 30px auto;
+      background;
+      padding: 0px;
+      border-radius: 0px;
+      box-shadow: 0 0px 0px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #007bff;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    button {
+      background-color: #28a745;
+      color: white;
+      border: none;
+      padding: 14px 30px;
+      margin: 15px 0 25px 0;
+      font-size: 18px;
+      border-radius: 8px;
+      cursor: pointer;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #1e7e34;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 35px;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 12px 15px;
+      text-align: center;
+    }
+    th {
+      background-color: #007bff;
+      color: white;
+    }
+    td.status-tepat {
+      color: #28a745;
+      font-weight: 600;
+    }
+    td.status-terlambat {
+      color: #dc3545;
+      font-weight: 700;
+    }
+    td.status-belum {
+      color: #6c757d;
+      font-style: italic;
+    }
+    canvas {
+      background: #f9fafd;
+      border-radius: 10px;
+      padding: 10px;
+      max-width: 700px;
+      margin: auto;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container" role="main">
+    <h2>Verifikasi Pengambilan Obat</h2>
+    <button id="btnTaken">Sudah Diambil</button>
+    
+    <div id="nextSchedule" style="text-align:center; font-size:18px; margin-bottom:40px; color:#155724; font-weight:bold; display:none;"></div>
+
+    <h2>Riwayat Pengambilan Obat</h2>
+    <table aria-label="Tabel riwayat pengambilan obat">
+      <thead>
+        <tr>
+          <th>No.</th>
+          <th>Tanggal Jadwal</th>
+          <th>Tanggal Pengambilan</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody id="historyTableBody">
+        <!-- Isi dinamis -->
+      </tbody>
+    </table>
+
+    <h2>Statistik Pengambilan Obat</h2>
+    <canvas id="statsChart" aria-describedby="chartDesc"></canvas>
+    <p id="chartDesc" hidden>Grafik menunjukkan persentase pengambilan obat tepat waktu, terlambat, dan belum diambil</p>
+  </div>
+
+<script>
+  // --- Konfigurasi Jadwal & Data ---
+  // Misal jadwal pengambilan obat sudah ada sebelumnya dalam 6 periode setiap 30 hari
+  let scheduleDays = 30; // interval hari antar jadwal
+  let initialDate = new Date();
+  initialDate.setHours(0,0,0,0);
+  initialDate.setDate(initialDate.getDate() - 150); // contoh jadwal mulai 150 hari lalu
+
+  // Ambil atau buat data riwayat pengambilan dalam localStorage
+  let medHistory = JSON.parse(localStorage.getItem('medHistory')) || [];
+
+  // generate jadwal 6 periode ke depan dari initialDate
+  function generateSchedules() {
+    let schedules = [];
+    for(let i = 0; i < 6; i++){
+      let scheduleDate = new Date(initialDate);
+      scheduleDate.setDate(initialDate.getDate() + i * scheduleDays);
+      schedules.push(scheduleDate.toISOString().split('T')[0]);
+    }
+    return schedules;
+  }
+
+  let schedules = generateSchedules();
+
+  // Update tampilkan jadwal berikutnya
+  const nextScheduleDiv = document.getElementById('nextSchedule');
+
+  function getNextScheduleDate() {
+    const now = new Date();
+    for(let dateStr of schedules){
+      let scheduledDate = new Date(dateStr);
+      if(scheduledDate >= now) return dateStr;
+    }
+    return null; // semua sudah lewat
+  }
+
+  function updateNextScheduleDisplay() {
+    const next = getNextScheduleDate();
+    if(next){
+      nextScheduleDiv.textContent = `Jadwal Pengambilan Berikutnya: ${next}`;
+      nextScheduleDiv.style.display = 'block';
+    } else {
+      nextScheduleDiv.textContent = "Semua jadwal pengambilan telah selesai.";
+      nextScheduleDiv.style.display = 'block';
+    }
+  }
+
+  // Fungsi simpan data pengambilan pada jadwal berikutnya yang belum diambil
+  function saveTaken() {
+    const next = getNextScheduleDate();
+    if(!next){
+      alert('Semua jadwal sudah selesai, tidak ada jadwal pengambilan berikutnya.');
+      return;
+    }
+    // Cek apakah jadwal sudah pernah diambil
+    const alreadyTaken = medHistory.find(e => e.scheduled === next);
+    if(alreadyTaken){
+      alert(`Pengambilan pada jadwal ${next} sudah tercatat.`);
+      return;
+    }
+    // Simpan tanggal pengambilan hari ini
+    const todayStr = new Date().toISOString().split('T')[0];
+    medHistory.push({
+      scheduled: next,
+      taken: todayStr
+    });
+    localStorage.setItem('medHistory', JSON.stringify(medHistory));
+    alert(`Berhasil verifikasi pengambilan obat untuk jadwal ${next} pada tanggal ${todayStr}.`);
+    updateNextScheduleDisplay();
+    renderHistoryTable();
+    updateStatsChart();
+  }
+
+  document.getElementById('btnTaken').addEventListener('click', saveTaken);
+
+  // --- Render Tabel Riwayat ---
+  function renderHistoryTable() {
+    const tbody = document.getElementById('historyTableBody');
+    tbody.innerHTML = '';
+
+    schedules.forEach((sched, idx) => {
+      // Cari pengambilan yang sesuai jadwal ini
+      const record = medHistory.find(h => h.scheduled === sched);
+
+      // Hitung status
+      let status = 'Belum Diambil';
+      let statusClass = 'status-belum';
+
+      if(record){
+        const scheduledDate = new Date(record.scheduled);
+        const takenDate = new Date(record.taken);
+        const diffDays = Math.floor((takenDate - scheduledDate)/(24*3600*1000));
+
+        if(diffDays <= 2) {
+          status = 'Tepat Waktu';
+          statusClass = 'status-tepat';
+        } else {
+          status = 'Terlambat';
+          statusClass = 'status-terlambat';
+        }
+      } else {
+        // Belum diambil dan kalau jadwal sudah lewat lebih dari 0 hari, status tetap "Belum Diambil"
+        const today = new Date();
+        if(new Date(sched) > today){
+          status = '-';
+          statusClass = '';
+        }
+      }
+
+      const takenDisplay = record ? record.taken : '-';
+
+      tbody.innerHTML += `
+        <tr>
+          <td>${idx + 1}</td>
+          <td>${sched}</td>
+          <td>${takenDisplay}</td>
+          <td class="${statusClass}">${status}</td>
+        </tr>
+      `;
+    });
+  }
+
+  // --- Grafik Statistik ---
+  const ctxStats = document.getElementById('statsChart').getContext('2d');
+  let statsChart;
+
+  function updateStatsChart() {
+    const stats = { tepat:0, terlambat:0, belum:0 };
+
+    schedules.forEach(sched => {
+      const rec = medHistory.find(h => h.scheduled === sched);
+      if(rec){
+        const scheduledDate = new Date(rec.scheduled);
+        const takenDate = new Date(rec.taken);
+        const diff = Math.floor((takenDate - scheduledDate) / (24*3600*1000));
+        if(diff <= 2){
+          stats.tepat++;
+        } else {
+          stats.terlambat++;
+        }
+      } else {
+        // Belum diambil dan jadwal sudah lewat berarti "belum"
+        if(new Date(sched) < new Date()) stats.belum++;
+      }
+    });
+
+    const data = {
+      labels: ['Tepat Waktu', 'Terlambat', 'Belum Diambil'],
+      datasets: [{
+        label: 'Pengambilan Obat',
+        data: [stats.tepat, stats.terlambat, stats.belum],
+        backgroundColor: [
+          'rgba(40, 167, 69, 0.7)',    // hijau
+          'rgba(220, 53, 69, 0.7)',    // merah
+          'rgba(108, 117, 125, 0.7)'   // abu-abu
+        ],
+        borderWidth: 1
+      }]
+    };
+
+    const options = {
+      responsive: true,
+      plugins: {
+        legend: { position: 'bottom' },
+        tooltip: { enabled: true }
+      }
+    };
+
+    if(statsChart) {
+      statsChart.data = data;
+      statsChart.update();
+    } else {
+      statsChart = new Chart(ctxStats, {
+        type: 'doughnut',
+        data: data,
+        options: options
+      });
+    }
+  }
+
+  // Inisialisasi tampilan halaman
+  updateNextScheduleDisplay();
+  renderHistoryTable();
+  updateStatsChart();
+
+</script>
+
+</body>
+        
+
+ <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-light mb-4">Address</h5>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Mataram, Indonesia</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@TBCareX.com</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-outline-light btn-social rounded-circle" href=""><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-social rounded-circle" href=""><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social rounded-circle" href=""><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-outline-light btn-social rounded-circle" href=""><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-light mb-4">Services</h5>
+                    <a class="btn btn-link" href="">MediTrack</a>
+                    <a class="btn btn-link" href="">Adherence Reward System</a>
+                    <a class="btn btn-link" href="">Refill MyOAT</a>
+                    <a class="btn btn-link" href="">Symptom Tracker</a>
+                    <a class="btn btn-link" href="">Lab Result</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-light mb-4">Quick Links</h5>
+                    <a class="btn btn-link" href="">About Us</a>
+                    <a class="btn btn-link" href="">Contact Us</a>
+                    <a class="btn btn-link" href="">Our Services</a>
+                    <a class="btn btn-link" href="">Terms & Condition</a>
+                    <a class="btn btn-link" href="">Support</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-light mb-4">Newsletter</h5>
+                    <div class="position-relative mx-auto" style="max-width: 400px;">
+                        <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
+                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="border-bottom" href="#">TB-CareX</a>, All Right Reserved.
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

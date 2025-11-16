@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>TB-CareX</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:wght@500;700;900&display=swap" rel="stylesheet"> 
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-light p-0 wow fadeIn" data-wow-delay="0.1s">
+        <div class="row gx-0 d-none d-lg-flex">
+            <div class="col-lg-7 px-5 text-start">
+                <div class="h-100 d-inline-flex align-items-center py-3 me-4">
+                    <small class="fa fa-map-marker-alt text-primary me-2"></small>
+                    <small>Mataram, Indonesia</small>
+                </div>
+                <div class="h-100 d-inline-flex align-items-center py-3">
+                    <small class="far fa-clock text-primary me-2"></small>
+                    <small>Mon - Fri : 09.00 AM - 09.00 PM</small>
+                </div>
+            </div>
+            <div class="col-lg-5 px-5 text-end">
+                <div class="h-100 d-inline-flex align-items-center py-3 me-4">
+                    <small class="fa fa-phone-alt text-primary me-2"></small>
+                    <small>+012 345 6789</small>
+                </div>
+                <div class="h-100 d-inline-flex align-items-center">
+                    <a class="btn btn-sm-square rounded-circle bg-white text-primary me-1" href=""><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-sm-square rounded-circle bg-white text-primary me-1" href=""><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-sm-square rounded-circle bg-white text-primary me-1" href=""><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-sm-square rounded-circle bg-white text-primary me-0" href=""><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0 wow fadeIn" data-wow-delay="0.1s">
+        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+            <h1 class="m-0 text-primary"><i class="far fa-hospital me-3"></i>TB-CareX</h1>
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+               <a href="index.html" class="nav-item nav-link">Home</a>
+                <a href="meditrack.html" class="nav-item nav-link">MediTrack</a>
+                <a href="adherence.html" class="nav-item nav-link active">Adherence Reward System</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Refill MyOAT</a>
+                    <div class="dropdown-menu rounded-0 rounded-bottom m-0">
+                        <a href="schedule.html" class="dropdown-item">Early Schedule</a>
+                        <a href="notification.html" class="dropdown-item">Notification and Reminder</a>
+                        <a href="confirmation.html" class="dropdown-item">Present Confirmation</a>
+                        <a href="verification.html" class="dropdown-item">Verification</a>
+                        <a href="statistic.html" class="dropdown-item">History and Statistic</a>
+                    </div>
+                </div>
+                <a href="symptom.html" class="nav-item nav-link">Symptom Tracker</a>
+            </div>
+            <a href="" class="btn btn-primary rounded-0 py-4 px-lg-5 d-none d-lg-block">LAB RESULTS<i class="fa fa-arrow-right ms-3"></i></a>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+
+    <!-- Page Header Start -->
+    <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <h1 class="display-3 text-white mb-3 animated slideInDown">Adherence Reward System</h1>
+            <nav aria-label="breadcrumb animated slideInDown">
+                <ol class="breadcrumb text-uppercase mb-0">
+                    <li class="breadcrumb-item"><a class="text-white" href="#"></a></li>
+                    <li class="breadcrumb-item"><a class="text-white" href="#"></a></li>
+                    <li class="breadcrumb-item text-primary active" aria-current="page"></li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <!-- Page Header End -->
+
+
+     <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f4fb;
+      margin: 0;
+      padding: 20px;
+      color: #004aad;
+    }
+    header {
+      background: #007bff;
+      color: white;
+      padding: 15px 20px;
+      font-size: 26px;
+      font-weight: bold;
+      text-align: center;
+      border-radius: 6px;
+      margin-bottom: 30px;
+    }
+    main {
+      max-width: 700px;
+      margin: auto;
+      background: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgb(0 0 0 / 0.1);
+    }
+    h2 {
+      margin-top: 0;
+      border-bottom: 3px solid #007bff;
+      padding-bottom: 8px;
+    }
+    label {
+      font-weight: 600;
+      margin-top: 15px;
+      display: block;
+    }
+    select, input[type=text], button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 6px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+      box-sizing: border-box;
+    }
+    button {
+      background: #004aad;
+      color: white;
+      margin-top: 25px;
+      font-weight: bold;
+      cursor: pointer;
+      border: none;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background: #023a8a;
+    }
+    .points-summary {
+      margin-top: 30px;
+      background: #e9f7ef;
+      border-left: 6px solid #2e7d32;
+      padding: 15px 20px;
+      font-weight: 600;
+      color: #2e7d32;
+      border-radius: 6px;
+    }
+    .reward {
+      margin-top: 30px;
+      padding: 20px;
+      background: #fff3cd;
+      border-left: 6px solid #ffca2c;
+      border-radius: 6px;
+      font-weight: 600;
+      color: #856404;
+    }
+    ul {
+      margin-top: 10px;
+      margin-left: 20px;
+      padding-left: 0;
+    }
+  </style>
+</head>
+<body>
+
+<header>Sistem Poin Kepatuhan</header>
+
+<main>
+  <h2>Penandaan Konsumsi Obat Hari Ini</h2>
+  <p>Setiap kali Anda menandai konsumsi obat tepat waktu, Anda akan mendapatkan poin kepatuhan.</p>
+
+  <form id="adherenceForm">
+    <label for="medicine">Pilih Obat:</label>
+    <select id="medicine" required>
+      <option value="" disabled selected>-- Pilih Obat --</option>
+      <option value="Rifampicin">Rifampicin</option>
+      <option value="Isoniazid">Isoniazid</option>
+      <option value="Pyrazinamide">Pyrazinamide</option>
+      <option value="Ethambutol">Ethambutol</option>
+    </select>
+
+    <label for="timely">Apakah Anda meminum obat tepat waktu hari ini?</label>
+    <select id="timely" required>
+      <option value="" disabled selected>-- Pilih Jawaban --</option>
+      <option value="yes">Ya</option>
+      <option value="no">Tidak</option>
+    </select>
+
+    <button type="submit">Kirim</button>
+  </form>
+
+  <div id="pointsSummary" class="points-summary" style="display:none;"></div>
+
+  <div id="rewardSection" class="reward" style="display:none;">
+    🎉 Selamat! Anda mendapatkan <span id="rewardType"></span> sebagai penghargaan atas kepatuhan Anda! <br/>
+    Tetap semangat lanjutkan terapi sesuai anjuran dokter! 💪
+  </div>
+
+  <h2>Riwayat Poin dan Evaluasi</h2>
+  <div id="pointsRecord">
+    <p>Memuat data poin kepatuhan...</p>
+  </div>
+</main>
+
+<script>
+  const STORAGE_KEY = 'tbcarex_adherence_points';
+  const POINT_PER_CONSUMPTION = 10;
+
+  const form = document.getElementById('adherenceForm');
+  const pointsSummary = document.getElementById('pointsSummary');
+  const rewardSection = document.getElementById('rewardSection');
+  const rewardTypeElem = document.getElementById('rewardType');
+  const pointsRecordDiv = document.getElementById('pointsRecord');
+
+  function getPointsData(){
+    const json = localStorage.getItem(STORAGE_KEY);
+    if(json) return JSON.parse(json);
+    return { daily: {}, weekly: {}, monthly: {}, totalPoints: 0 };
+  }
+
+  function savePointsData(data){
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+  }
+
+  function getWeekNumber(d) {
+    const date = new Date(Date.UTC(d.getFullYear(), d.getMonth(), d.getDate()));
+    const dayNum = date.getUTCDay() || 7; 
+    date.setUTCDate(date.getUTCDate() + 4 - dayNum);
+    const yearStart = new Date(Date.UTC(date.getUTCFullYear(),0,1));
+    return Math.ceil((((date - yearStart) / 86400000) + 1)/7);
+  }
+
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    const medicine = form.medicine.value;
+    const timely = form.timely.value;
+    if (!medicine || !timely) return;
+
+    const today = new Date();
+    const dateKey = today.toISOString().slice(0, 10);
+    const weekKey = `${today.getFullYear()}-W${getWeekNumber(today)}`;
+    const monthKey = `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, '0')}`;
+
+    let data = getPointsData();
+
+    if(data.daily[dateKey + '-' + medicine]){
+      alert('Anda sudah menandai konsumsi obat ini hari ini.');
+      return;
+    }
+
+    let earnedPoints = 0;
+    if(timely === 'yes'){
+      earnedPoints = POINT_PER_CONSUMPTION;
+      data.totalPoints += earnedPoints;
+      data.daily[dateKey + '-' + medicine] = earnedPoints;
+      data.weekly[weekKey] = (data.weekly[weekKey] || 0) + earnedPoints;
+      data.monthly[monthKey] = (data.monthly[monthKey] || 0) + earnedPoints;
+    } else {
+      data.daily[dateKey + '-' + medicine] = 0;
+    }
+
+    savePointsData(data);
+
+    pointsSummary.style.display = 'block';
+    pointsSummary.innerHTML = `
+      <p>Anda mendapatkan <b>${earnedPoints} poin</b> untuk konsumsi obat <b>${medicine}</b> hari ini.</p>
+      <p>Total poin akumulasi: <b>${data.totalPoints}</b></p>
+    `;
+
+    evaluateRewards(data);
+    renderPointsRecord(data);
+
+    form.reset();
+  });
+
+  function evaluateRewards(data){
+    let rewardText = null;
+    if(data.totalPoints >= 250){
+      rewardText = "Sertifikat Kepatuhan";
+    } else if(data.totalPoints >= 150){
+      rewardText = "Badge \"Terbaik Minggu Ini\"";
+    } else if(data.totalPoints >= 70){
+      rewardText = "Ucapan Motivasi";
+    }
+    if(rewardText){
+      rewardSection.style.display = 'block';
+      rewardTypeElem.textContent = rewardText;
+    } else {
+      rewardSection.style.display = 'none';
+    }
+  }
+
+  function renderPointsRecord(data){
+    if(!data || !data.daily){
+      pointsRecordDiv.innerHTML = '<p>Belum ada data poin kepatuhan.</p>';
+      return;
+    }
+    let html = '<h3>Rekapitulasi Poin Kepatuhan:</h3>';
+
+    html += '<ul>';
+    const dailyEntries = Object.entries(data.daily)
+      .sort((a,b) => (a[0] < b[0] ? 1 : -1))
+      .slice(0, 7);
+    html += '<li><b>Poin Harian (7 hari terakhir)</b><ul>';
+    dailyEntries.forEach(([key, points]) => {
+      const date = key.split('-').slice(0,3).join('-');
+      const med = key.split('-').slice(3).join('-');
+      html += `<li>${date} - ${med} : ${points} poin</li>`;
+    });
+    html += '</ul></li>';
+
+    html += '<li><b>Poin Mingguan</b><ul>';
+    for(const week in data.weekly){
+      html += `<li>${week} : ${data.weekly[week]} poin</li>`;
+    }
+    html += '</ul></li>';
+
+    html += '<li><b>Poin Bulanan</b><ul>';
+    for(const month in data.monthly){
+      html += `<li>${month} : ${data.monthly[month]} poin</li>`;
+    }
+    html += '</ul></li>';
+    html += '</ul>';
+    html += `<p><b>Total Poin Keseluruhan: ${data.totalPoints}</b></p>`;
+
+    pointsRecordDiv.innerHTML = html;
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const data = getPointsData();
+    if(data.totalPoints > 0){
+      renderPointsRecord(data);
+      evaluateRewards(data);
+      pointsSummary.style.display = 'none';
+    } else {
+      pointsRecordDiv.innerHTML = '<p>Belum ada data poin kepatuhan.</p>';
+    }
+  });
+</script>
+        
+
+   <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-light mb-4">Address</h5>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Mataram, Indonesia</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@TBCareX.com</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-outline-light btn-social rounded-circle" href=""><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-social rounded-circle" href=""><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social rounded-circle" href=""><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-outline-light btn-social rounded-circle" href=""><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-light mb-4">Services</h5>
+                    <a class="btn btn-link" href="">MediTrack</a>
+                    <a class="btn btn-link" href="">Adherence Reward System</a>
+                    <a class="btn btn-link" href="">Refill MyOAT</a>
+                    <a class="btn btn-link" href="">Symptom Tracker</a>
+                    <a class="btn btn-link" href="">Lab Result</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-light mb-4">Quick Links</h5>
+                    <a class="btn btn-link" href="">About Us</a>
+                    <a class="btn btn-link" href="">Contact Us</a>
+                    <a class="btn btn-link" href="">Our Services</a>
+                    <a class="btn btn-link" href="">Terms & Condition</a>
+                    <a class="btn btn-link" href="">Support</a>
+                </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="border-bottom" href="#">TB-CareX</a>, All Right Reserved.
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

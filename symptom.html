@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>TB-CareX</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:wght@500;700;900&display=swap" rel="stylesheet"> 
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-light p-0 wow fadeIn" data-wow-delay="0.1s">
+        <div class="row gx-0 d-none d-lg-flex">
+            <div class="col-lg-7 px-5 text-start">
+                <div class="h-100 d-inline-flex align-items-center py-3 me-4">
+                    <small class="fa fa-map-marker-alt text-primary me-2"></small>
+                    <small>Mataram, Indonesia</small>
+                </div>
+                <div class="h-100 d-inline-flex align-items-center py-3">
+                    <small class="far fa-clock text-primary me-2"></small>
+                    <small>Mon - Fri : 09.00 AM - 09.00 PM</small>
+                </div>
+            </div>
+            <div class="col-lg-5 px-5 text-end">
+                <div class="h-100 d-inline-flex align-items-center py-3 me-4">
+                    <small class="fa fa-phone-alt text-primary me-2"></small>
+                    <small>+012 345 6789</small>
+                </div>
+                <div class="h-100 d-inline-flex align-items-center">
+                    <a class="btn btn-sm-square rounded-circle bg-white text-primary me-1" href=""><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-sm-square rounded-circle bg-white text-primary me-1" href=""><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-sm-square rounded-circle bg-white text-primary me-1" href=""><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-sm-square rounded-circle bg-white text-primary me-0" href=""><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0 wow fadeIn" data-wow-delay="0.1s">
+        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+            <h1 class="m-0 text-primary"><i class="far fa-hospital me-3"></i>TB-CareX</h1>
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+               <a href="index.html" class="nav-item nav-link">Home</a>
+                <a href="meditrack.html" class="nav-item nav-link">MediTrack</a>
+                <a href="adherence.html" class="nav-item nav-link">Adherence Reward System</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Refill MyOAT</a>
+                    <div class="dropdown-menu rounded-0 rounded-bottom m-0">
+                        <a href="schedule.html" class="dropdown-item">Early Schedule</a>
+                        <a href="notification.html" class="dropdown-item">Notification and Reminder</a>
+                        <a href="confirmation.html" class="dropdown-item">Present Confirmation</a>
+                        <a href="verification.html" class="dropdown-item">Verification</a>
+                        <a href="statistic.html" class="dropdown-item">History and Statistic</a>
+                    </div>
+                </div>
+                <a href="symptom.html" class="nav-item nav-link active">Symptom Tracker</a>
+            </div>
+            <a href="" class="btn btn-primary rounded-0 py-4 px-lg-5 d-none d-lg-block">LAB RESULTS<i class="fa fa-arrow-right ms-3"></i></a>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+
+    <!-- Page Header Start -->
+    <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <h1 class="display-3 text-white mb-3 animated slideInDown">Symptom Tracker</h1>
+            <nav aria-label="breadcrumb animated slideInDown">
+                <ol class="breadcrumb text-uppercase mb-0">
+                    <li class="breadcrumb-item"><a class="text-white" href="#"></a></li>
+                    <li class="breadcrumb-item"><a class="text-white" href="#"></a></li>
+                    <li class="breadcrumb-item text-primary active" aria-current="page"></li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <!-- Page Header End -->
+
+
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f2f6fc;
+      margin: 0;
+      padding: 20px;
+      color: #222;
+    }
+    h1 {
+      text-align: center;
+      color: #007bff;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background;
+      padding;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    form {
+      margin-bottom: 30px;
+      display: grid;
+      gap: 10px;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+    label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+    input[type="number"], textarea {
+      width: 100%;
+      padding: 8px 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 14px;
+      resize: vertical;
+    }
+    textarea {
+      min-height: 70px;
+    }
+    button {
+      grid-column: span 2;
+      padding: 12px;
+      background: #007bff;
+      border: none;
+      color: white;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      max-width: 200px;
+      margin-top: 10px;
+      justify-self: center;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+    .alert {
+      margin: 15px 0;
+      padding: 15px;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+    .alert.warning {
+      background-color: #fff3cd;
+      color: #856404;
+      border: 1px solid #ffeeba;
+    }
+    #charts {
+      margin-top: 40px;
+    }
+    canvas {
+      background: #f9fafd;
+      border-radius: 10px;
+      padding: 15px;
+    }
+    /* Chat box styles */
+    .chat-container {
+      margin-top: 40px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      background: #fafafa;
+      display: flex;
+      flex-direction: column;
+      height: 350px;
+      max-width: 900px;
+    }
+    .chat-messages {
+      flex-grow: 1;
+      padding: 15px;
+      overflow-y: auto;
+      font-size: 14px;
+    }
+    .chat-input-container {
+      display: flex;
+      padding: 10px;
+      border-top: 1px solid #ccc;
+      background-color: #fff;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+    }
+    .chat-input {
+      flex-grow: 1;
+      padding: 10px;
+      font-size: 14px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      resize: none;
+      height: 50px;
+    }
+    .chat-send-btn {
+      background-color: #007bff;
+      border: none;
+      color: white;
+      font-weight: bold;
+      padding: 0 20px;
+      margin-left: 10px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .chat-send-btn:hover {
+      background-color: #0056b3;
+    }
+    .chat-message {
+      margin-bottom: 12px;
+      padding: 10px;
+      background-color: #e1f0ff;
+      border-radius: 8px;
+      width: fit-content;
+      max-width: 80%;
+    }
+    .chat-message.staff {
+      background-color: #cff4fc;
+      align-self: flex-start;
+    }
+    .chat-message.patient {
+      background-color: #e1f0ff;
+      align-self: flex-end;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container" role="main">
+  <h1>Pemantauan Gejala Harian TB</h1>
+
+  <form id="symptomForm" aria-label="Form input gejala harian pasien">
+    <div>
+      <label for="batuk">Batuk (durasi jam per hari)</label>
+      <input type="number" id="batuk" name="batuk" min="0" max="24" required aria-required="true" />
+    </div>
+    <div>
+      <label for="demam">Demam (suhu °C)</label>
+      <input type="number" id="demam" name="demam" min="35" max="42" step="0.1" required aria-required="true" />
+    </div>
+    <div>
+      <label for="beratBadan">Berat Badan (kg)</label>
+      <input type="number" id="beratBadan" name="beratBadan" min="10" max="300" step="0.1" required aria-required="true" />
+    </div>
+    <div>
+      <label for="nafsuMakan">Nafsu Makan (skor 0-10)</label>
+      <input type="number" id="nafsuMakan" name="nafsuMakan" min="0" max="10" required aria-required="true" />
+    </div>
+    <div style="grid-column: span 2;">
+      <label for="keluhan">Keluhan tambahan / efek samping (opsional)</label>
+      <textarea id="keluhan" name="keluhan" placeholder="Tuliskan keluhan jika ada..."></textarea>
+    </div>
+    <button type="submit" aria-label="Kirim data gejala harian">Kirim</button>
+  </form>
+
+  <div id="alertBox" class="alert" style="display:none;"></div>
+
+  <section id="charts" aria-label="Grafik perkembangan gejala">
+    <h2>Grafik Perkembangan Gejala</h2>
+    <canvas id="symptomChart" aria-describedby="chartDesc"></canvas>
+    <p id="chartDesc" hidden>Grafik ini menampilkan perubahan durasi batuk, suhu demam, berat badan, dan nafsu makan pasien dari waktu ke waktu</p>
+  </section>
+
+  <!-- Kolom chat sederhana untuk konsultasi -->
+  <section class="chat-container" aria-label="Chat room konsultasi gejala">
+    <div class="chat-messages" id="chatMessages" role="log" aria-live="polite" aria-relevant="additions"></div>
+    <div class="chat-input-container">
+      <textarea id="chatInput" class="chat-input" placeholder="Tulis pesan konsultasi..." aria-label="Pesan konsultasi"></textarea>
+      <button id="sendChat" class="chat-send-btn" aria-label="Kirim pesan chat">Kirim</button>
+    </div>
+  </section>
+</div>
+
+<script>
+  // Ambil elemen form dan alert box
+  const form = document.getElementById('symptomForm');
+  const alertBox = document.getElementById('alertBox');
+
+  // Array untuk menyimpan data gejala harian
+  let symptomData = JSON.parse(localStorage.getItem('symptomData')) || [];
+
+  // Fungsi untuk tampilkan alert peringatan gejala memburuk
+  function checkSymptoms(values) {
+    // Aturan sederhana untuk tanda peringatan:
+    // Batuk > 5 jam, Demam > 38°C, Berat badan turun dibanding hari sebelumnya > 1 kg, Nafsu makan < 3
+    const lastEntry = symptomData.length > 0 ? symptomData[symptomData.length -1] : null;
+    let warningMessages = [];
+
+    if (values.batuk > 5) {
+      warningMessages.push('Durasi batuk terlalu lama (lebih dari 5 jam).');
+    }
+    if (values.demam > 38) {
+      warningMessages.push('Suhu demam tinggi (>38°C).');
+    }
+    if (lastEntry && (lastEntry.beratBadan - values.beratBadan) > 1) {
+      warningMessages.push('Berat badan menurun lebih dari 1 kg sejak kemarin.');
+    }
+    if (values.nafsuMakan < 3) {
+      warningMessages.push('Nafsu makan sangat rendah (<3).');
+    }
+
+    if (warningMessages.length > 0) {
+      alertBox.innerHTML =
+        '⚠️ <strong>Perhatian!</strong> Gejala memburuk terdeteksi:<ul><li>' +
+        warningMessages.join('</li><li>') + '</li></ul>' +
+        '<button onclick="scheduleConsultation()" style="margin-top:10px; padding:5px 15px; font-weight:700; color:#007bff; border:none; background:#eef9ff; border-radius:6px; cursor:pointer;">Jadwalkan Konsultasi Dokter</button>';
+      alertBox.style.display = 'block';
+    } else {
+      alertBox.style.display = 'none';
+      alertBox.innerHTML = '';
+    }
+  }
+
+  // Simulasi jadwal konsultasi
+  function scheduleConsultation() {
+    alert('Fitur penjadwalan konsultasi dokter akan segera hadir. Petugas akan menghubungi Anda.');
+  }
+
+  // Simpan data ke storage dan update grafik
+  function saveSymptomData(newEntry) {
+    symptomData.push(newEntry);
+    localStorage.setItem('symptomData', JSON.stringify(symptomData));
+    updateChart();
+  }
+
+  // Event submit form
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    
+    const newEntry = {
+      date: new Date().toISOString().split('T')[0], // tanggal hari ini YYYY-MM-DD
+      batuk: Number(form.batuk.value),
+      demam: Number(form.demam.value),
+      beratBadan: Number(form.beratBadan.value),
+      nafsuMakan: Number(form.nafsuMakan.value),
+      keluhan: form.keluhan.value.trim(),
+    };
+
+    saveSymptomData(newEntry);
+    checkSymptoms(newEntry);
+    form.reset();
+    appendChatMessage('patient', `Lapor gejala hari ${newEntry.date}`);
+  });
+
+
+  // Grafik Chart.js
+  const ctx = document.getElementById('symptomChart').getContext('2d');
+
+  // Data awal kosong - akan di update
+  let symptomChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: [], // tanggal
+      datasets: [
+        {
+          label: 'Batuk (jam)',
+          borderColor: '#007bff',
+          backgroundColor: 'rgba(0,123,255,0.2)',
+          fill: true,
+          data: [],
+          tension: 0.3,
+        },
+        {
+          label: 'Demam (°C)',
+          borderColor: '#dc3545',
+          backgroundColor: 'rgba(220,53,69,0.2)',
+          fill: true,
+          data: [],
+          tension: 0.3,
+        },
+        {
+          label: 'Berat Badan (kg)',
+          borderColor: '#28a745',
+          backgroundColor: 'rgba(40,167,69,0.2)',
+          fill: true,
+          data: [],
+          tension: 0.3,
+        },
+        {
+          label: 'Nafsu Makan (0-10)',
+          borderColor: '#ffc107',
+          backgroundColor: 'rgba(255,193,7,0.2)',
+          fill: true,
+          data: [],
+          tension: 0.3,
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        legend: { position: 'top' },
+        tooltip: { mode: 'index', intersect: false }
+      },
+      interaction: { mode: 'nearest', intersect: true },
+      scales: {
+        y: {
+          beginAtZero: true,
+          suggestedMax: 10
+        }
+      }
+    }
+  });
+
+  // Update chart dengan data terbaru
+  function updateChart() {
+    const labels = symptomData.map(d => d.date);
+    const batukData = symptomData.map(d => d.batuk);
+    const demamData = symptomData.map(d => d.demam);
+    const beratBadanData = symptomData.map(d => d.beratBadan);
+    const nafsuMakanData = symptomData.map(d => d.nafsuMakan);
+
+    symptomChart.data.labels = labels;
+    symptomChart.data.datasets[0].data = batukData;
+    symptomChart.data.datasets[1].data = demamData;
+    symptomChart.data.datasets[2].data = beratBadanData;
+    symptomChart.data.datasets[3].data = nafsuMakanData;
+    symptomChart.update();
+  }
+
+  // Inisialisasi chart saat load
+  updateChart();
+
+
+  // ================================
+  // Kolom chat sederhana
+  const chatMessages = document.getElementById('chatMessages');
+  const chatInput = document.getElementById('chatInput');
+  const sendChatBtn = document.getElementById('sendChat');
+
+  // Data chat disimpan di localStorage
+  let chatData = JSON.parse(localStorage.getItem('chatData')) || [];
+
+  function renderChat() {
+    chatMessages.innerHTML = '';
+    chatData.forEach(msg => {
+      const msgDiv = document.createElement('div');
+      msgDiv.classList.add('chat-message');
+      msgDiv.classList.add(msg.sender);
+      msgDiv.textContent = msg.text;
+      chatMessages.appendChild(msgDiv);
+    });
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+  }
+
+  function appendChatMessage(sender, text) {
+    chatData.push({sender, text});
+    localStorage.setItem('chatData', JSON.stringify(chatData));
+    renderChat();
+  }
+
+  // Kirim chat pasien
+  sendChatBtn.addEventListener('click', () => {
+    const text = chatInput.value.trim();
+    if(!text) return;
+    appendChatMessage('patient', text);
+    chatInput.value = '';
+    
+    // Simulasi balesan staf/dokter (aslinya pakai backend dan realtime)
+    setTimeout(() => {
+      appendChatMessage('staff', 'Terima kasih atas informasinya. Kami akan memeriksa data Anda dan segera menghubungi jika diperlukan.');
+    }, 1500);
+  });
+
+  // Render chat saat load
+  renderChat();
+
+</script>
+
+</body>
+
+  <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-light mb-4">Address</h5>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Mataram, Indonesia</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@TBCareX.com</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-outline-light btn-social rounded-circle" href=""><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-social rounded-circle" href=""><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social rounded-circle" href=""><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-outline-light btn-social rounded-circle" href=""><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-light mb-4">Services</h5>
+                    <a class="btn btn-link" href="">MediTrack</a>
+                    <a class="btn btn-link" href="">Adherence Reward System</a>
+                    <a class="btn btn-link" href="">Refill MyOAT</a>
+                    <a class="btn btn-link" href="">Symptom Tracker</a>
+                    <a class="btn btn-link" href="">Lab Result</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-light mb-4">Quick Links</h5>
+                    <a class="btn btn-link" href="">About Us</a>
+                    <a class="btn btn-link" href="">Contact Us</a>
+                    <a class="btn btn-link" href="">Our Services</a>
+                    <a class="btn btn-link" href="">Terms & Condition</a>
+                    <a class="btn btn-link" href="">Support</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-light mb-4">Newsletter</h5>
+                    <div class="position-relative mx-auto" style="max-width: 400px;">
+                        <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
+                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="border-bottom" href="#">TB-CareX</a>, All Right Reserved.
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
